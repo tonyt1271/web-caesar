@@ -36,7 +36,8 @@ def hello():			#/hello
 									#to a variable this is for method = 'get'
 	first_name = request.form['first_name'] #this is for method = 'post'
 	last_name = request.form['last_name']
-	return "<h1>Hello, "+first_name+" "+last_name+"!</h1>"
+	#return "<h1>Hello, "+first_name+" "+last_name+"!</h1>"
+	return "<h1>Hello {} {}!</h1>".format(first_name,last_name)
 app.run()
 
 #<form action="https://duckduckgo.com" method="get">
