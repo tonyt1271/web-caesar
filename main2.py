@@ -33,10 +33,10 @@ form = """
             }}
             
         </style>
+        <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico">
     </head>
     <body>
-        <form action = "/encrypt" method = 'post'>
-            
+           <form action = "/encrypt" method = 'post'>
             
             <p><label for="encrypt">Encrypt</label>
                 <input name="direction" class="radio" id="encrypt" type="radio" checked="checked" 
@@ -81,6 +81,9 @@ def hello():			#/hello
 	
 	return "<h1>Hello {} {}!</h1>".format(first_name,last_name)
 
+# @app.route("/favicon.ico")
+# def forge():
+# 	return "favicon.ico"
 
 @app.route("/encrypt", methods = ['POST'])
 def caesar():
